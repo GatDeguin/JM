@@ -1,0 +1,508 @@
+[
+  {
+    "id": "banoSeda",
+    "nombre": "Baño de Seda",
+    "descripcionBreve": "Nutrición con proteínas de seda para brillo y suavidad inmediata.",
+    "beneficiosClave": [
+      "suavidad",
+      "brillo",
+      "reparación"
+    ],
+    "enlaceEcommerce": "https://www.jmhaircosmetic.com.ar/productos/bano-de-seda/"
+  },
+  {
+    "id": "keratinaGold",
+    "nombre": "Keratina Gold",
+    "descripcionBreve": "Shock ultra-keratínico que repone fibra y elimina frizz.",
+    "beneficiosClave": [
+      "frizz",
+      "nutrición",
+      "reparación"
+    ],
+    "enlaceEcommerce": "https://www.jmhaircosmetic.com.ar/productos/keratina-gold/"
+  },
+  {
+    "id": "botoxGold",
+    "nombre": "Botox Gold",
+    "descripcionBreve": "Nutrición exprés sin brushing: rellena porosidad y da brillo extremo.",
+    "beneficiosClave": [
+      "resequedad",
+      "brillo",
+      "reparación"
+    ],
+    "enlaceEcommerce": "https://www.jmhaircosmetic.com.ar/productos/botox-gold/"
+  },
+  {
+    "id": "cherryLiquida",
+    "nombre": "Cherry Líquida",
+    "descripcionBreve": "Fluido antioxidante que repara y blinda sin tiempo de pose.",
+    "beneficiosClave": [
+      "procesados",
+      "suavidad",
+      "sellado"
+    ],
+    "enlaceEcommerce": "https://www.jmhaircosmetic.com.ar/productos/cherry-liquida/"
+  },
+  {
+    "id": "blindajeCherry",
+    "nombre": "Blindaje Cherry",
+    "descripcionBreve": "Aceite sellador de puntas con extracto de cereza y vitamina E.",
+    "beneficiosClave": [
+      "puntas abiertas",
+      "brillo",
+      "antioxidante"
+    ],
+    "enlaceEcommerce": "https://www.jmhaircosmetic.com.ar/productos/blindaje-cherry/"
+  },
+  {
+    "id": "oroLiquido",
+    "nombre": "Oro Líquido",
+    "descripcionBreve": "Con óleo de coco + argán: hidratación y protección térmica 24 h.",
+    "beneficiosClave": [
+      "frizz",
+      "protección calor",
+      "brillo"
+    ],
+    "enlaceEcommerce": "https://www.jmhaircosmetic.com.ar/productos/oro-liquido/"
+  },
+  {
+    "id": "oroLiquidoCrema",
+    "nombre": "Oro Líquido en Crema",
+    "descripcionBreve": "Versión leave-in que nutre, baja frizz y actúa como protector térmico.",
+    "beneficiosClave": [
+      "leave-in",
+      "frizz",
+      "nutrición"
+    ],
+    "enlaceEcommerce": "https://www.jmhaircosmetic.com.ar/productos/oro-liquido-en-crema/"
+  },
+  {
+    "id": "alisadoExpress",
+    "nombre": "Alisado Express sin Formol",
+    "descripcionBreve": "Alisado semipermanente que reduce volumen y aporta brillo.",
+    "beneficiosClave": [
+      "alisado",
+      "brillo",
+      "sin formol"
+    ],
+    "enlaceEcommerce": "https://www.jmhaircosmetic.com.ar/productos/alisado-express-sin-formol/"
+  },
+  {
+    "id": "protCherry",
+    "nombre": "Protector Térmico Cherry",
+    "descripcionBreve": "Spray antioxidante con aceite de cereza que suaviza y protege.",
+    "beneficiosClave": [
+      "protección calor",
+      "frizz",
+      "antioxidante"
+    ],
+    "enlaceEcommerce": "https://www.jmhaircosmetic.com.ar/productos/protector-termico-cherry/"
+  },
+  {
+    "id": "shampooCherry",
+    "nombre": "Shampoo Cherry",
+    "descripcionBreve": "Limpieza hidratante con aceite de cereza para cabellos secos.",
+    "beneficiosClave": [
+      "sequedad",
+      "frizz",
+      "daño químico"
+    ],
+    "enlaceEcommerce": "https://www.jmhaircosmetic.com.ar/productos/shampoo-cherry/"
+  },
+  {
+    "id": "shampooCoco",
+    "nombre": "Shampoo Coco Nut",
+    "descripcionBreve": "Fortalece con aceite de coco, controla caspa y deja brillo natural.",
+    "beneficiosClave": [
+      "caspa",
+      "sequedad",
+      "fortalecedor"
+    ],
+    "enlaceEcommerce": "https://www.jmhaircosmetic.com.ar/productos/shampoo-coco-nut/"
+  },
+  {
+    "id": "shampooOro",
+    "nombre": "Shampoo Oro",
+    "descripcionBreve": "Óleo de coco + miel: elimina impurezas y realza brillo profesional.",
+    "beneficiosClave": [
+      "brillo",
+      "nutrición",
+      "frizz"
+    ],
+    "enlaceEcommerce": "https://www.jmhaircosmetic.com.ar/productos/shampoo-oro/"
+  },
+  {
+    "id": "shampooNeutro",
+    "nombre": "Shampoo Neutro",
+    "descripcionBreve": "Pre-tratamiento que abre cutícula para recibir nutriciones o alisados.",
+    "beneficiosClave": [
+      "pretratamiento",
+      "grasa",
+      "impurezas"
+    ],
+    "enlaceEcommerce": "https://www.jmhaircosmetic.com.ar/productos/shampoo-neutro/"
+  },
+  {
+    "id": "shampooSavia",
+    "nombre": "Shampoo Savia",
+    "descripcionBreve": "Limpieza suave que hidrata sin barrer aceites naturales.",
+    "beneficiosClave": [
+      "hidratación",
+      "sequedad",
+      "uso diario"
+    ],
+    "enlaceEcommerce": "https://www.jmhaircosmetic.com.ar/linea-savia/"
+  },
+  {
+    "id": "shampooPurple",
+    "nombre": "Shampoo Purple Plex",
+    "descripcionBreve": "Neutraliza amarillos y repara cabellos decolorados con karité + argán.",
+    "beneficiosClave": [
+      "matizador",
+      "daño químico",
+      "rotura"
+    ],
+    "enlaceEcommerce": "https://www.jmhaircosmetic.com.ar/productos/shampoo-purple-plex/"
+  },
+  {
+    "id": "shampooOrtiga",
+    "nombre": "Shampoo Ortiga",
+    "descripcionBreve": "Estimula cuero cabelludo y fortalece la fibra para un crecimiento sano.",
+    "beneficiosClave": [
+      "fortalecedor",
+      "brillo",
+      "salud capilar"
+    ],
+    "enlaceEcommerce": "https://www.jmhaircosmetic.com.ar/productos/shampoo-ortiga/"
+  },
+  {
+    "id": "shampooGrey",
+    "nombre": "Shampoo Grey Silver",
+    "descripcionBreve": "Matiza tonos amarillos en canas y rubios, aportando brillo plateado.",
+    "beneficiosClave": [
+      "matizador",
+      "brillo",
+      "anti-amarillo"
+    ],
+    "enlaceEcommerce": "https://www.jmhaircosmetic.com.ar/productos/shampoo-grey-silver/"
+  },
+  {
+    "id": "shampooBiotina",
+    "nombre": "Shampoo Biotina",
+    "descripcionBreve": "Refuerza hebra y ayuda a frenar caída gracias a biotina concentrada.",
+    "beneficiosClave": [
+      "caída",
+      "fortalecedor",
+      "volumen"
+    ],
+    "enlaceEcommerce": "https://www.jmhaircosmetic.com.ar/productos/shampoo-biotina/"
+  },
+  {
+    "id": "maskCherry",
+    "nombre": "Mask Cherry",
+    "descripcionBreve": "Baño de crema nutritivo con óleo de cereza que restaura suavidad.",
+    "beneficiosClave": [
+      "sequedad",
+      "frizz",
+      "brillo"
+    ],
+    "enlaceEcommerce": "https://www.jmhaircosmetic.com.ar/productos/mask-cherry/"
+  },
+  {
+    "id": "maskCoco",
+    "nombre": "Mask Coco",
+    "descripcionBreve": "Hidratación mega 3-en-1 con óleo de coco y argán; chau frizz.",
+    "beneficiosClave": [
+      "hidratación",
+      "frizz",
+      "nutrición"
+    ],
+    "enlaceEcommerce": "https://www.jmhaircosmetic.com.ar/productos/mask-coco/"
+  },
+  {
+    "id": "maskOro",
+    "nombre": "Mask Oro",
+    "descripcionBreve": "Shock nutritivo con miel + argán para cabellos apagados y dañados.",
+    "beneficiosClave": [
+      "daño químico",
+      "brillo",
+      "nutrición"
+    ],
+    "enlaceEcommerce": "https://www.jmhaircosmetic.com.ar/productos/mask-oro/"
+  },
+  {
+    "id": "maskSavia",
+    "nombre": "Mask Savia",
+    "descripcionBreve": "Hidratación intensa que controla frizz y aporta elasticidad.",
+    "beneficiosClave": [
+      "hidratación",
+      "frizz",
+      "elasticidad"
+    ],
+    "enlaceEcommerce": "https://www.jmhaircosmetic.com.ar/productos/mask-savia/"
+  },
+  {
+    "id": "maskPurple",
+    "nombre": "Máscara Purple Plex",
+    "descripcionBreve": "Tratamiento reconstructor post-decoloración con arándanos y karité.",
+    "beneficiosClave": [
+      "rotura",
+      "daño químico",
+      "matizador"
+    ],
+    "enlaceEcommerce": "https://www.jmhaircosmetic.com.ar/productos/mascara-purple-plex/"
+  },
+  {
+    "id": "maskBlack",
+    "nombre": "Mask Black Matizador",
+    "descripcionBreve": "Concentrado matizador BLACK que neutraliza amarillos en alturas 9/10.",
+    "beneficiosClave": [
+      "matizador",
+      "nutrición",
+      "cabello rubio"
+    ],
+    "enlaceEcommerce": "https://www.jmhaircosmetic.com.ar/productos/mask-black/"
+  },
+  {
+    "id": "maskBarber",
+    "nombre": "Mask Barber",
+    "descripcionBreve": "Cuidado intensivo pensado para barbas y cabellos masculinos.",
+    "beneficiosClave": [
+      "hidratación",
+      "suavidad",
+      "barber"
+    ],
+    "enlaceEcommerce": "https://www.jmhaircosmetic.com.ar/productos/mask-barber/"
+  },
+  {
+    "id": "gliceradoPurple",
+    "nombre": "Glicerado Purple Plex",
+    "descripcionBreve": "Paso 3 del sistema Plex: rescata cabellos extremadamente secos.",
+    "beneficiosClave": [
+      "reparación",
+      "sequedad",
+      "plex"
+    ],
+    "enlaceEcommerce": "https://www.jmhaircosmetic.com.ar/productos/glicerado-purple-plex/"
+  },
+  {
+    "id": "puntasPurple",
+    "nombre": "Puntas Repair Purple Plex",
+    "descripcionBreve": "Blend oleoso que sella puntas y previene rotura post-decoloración.",
+    "beneficiosClave": [
+      "puntas abiertas",
+      "rotura",
+      "plex"
+    ],
+    "enlaceEcommerce": "https://www.jmhaircosmetic.com.ar/productos/puntas-repair-purple-plex/"
+  },
+  {
+    "id": "balsamoSavia",
+    "nombre": "Bálsamo Savia",
+    "descripcionBreve": "Acondicionador ligero que prolonga hidratación y suavidad natural.",
+    "beneficiosClave": [
+      "hidratación",
+      "frizz",
+      "ligero"
+    ],
+    "enlaceEcommerce": "https://www.jmhaircosmetic.com.ar/productos/balsamo-savia/"
+  },
+  {
+    "id": "balsamoBiotina",
+    "nombre": "Bálsamo Biotina",
+    "descripcionBreve": "Fortalece cabello fino aportando volumen y brillo inmediato.",
+    "beneficiosClave": [
+      "volumen",
+      "fortalecedor",
+      "brillo"
+    ],
+    "enlaceEcommerce": "https://www.jmhaircosmetic.com.ar/productos/balsamo-biotina/"
+  },
+  {
+    "id": "balsamoOro",
+    "nombre": "Bálsamo Oro",
+    "descripcionBreve": "Leave-in nutritivo con óleo de coco que protege del calor y baja frizz.",
+    "beneficiosClave": [
+      "protección calor",
+      "nutrición",
+      "frizz"
+    ],
+    "enlaceEcommerce": "https://www.jmhaircosmetic.com.ar/productos/balsamo-oro/"
+  },
+  {
+    "id": "balsamoCoco",
+    "nombre": "Bálsamo Coco Nut",
+    "descripcionBreve": "Aporta proteínas y vitaminas para revitalizar cabello reseco.",
+    "beneficiosClave": [
+      "sequedad",
+      "nutrición",
+      "suavidad"
+    ],
+    "enlaceEcommerce": "https://www.jmhaircosmetic.com.ar/productos/balsamo-coco-nut/"
+  },
+  {
+    "id": "crepeSavia",
+    "nombre": "Crema para Peinar Savia",
+    "descripcionBreve": "Leave-in UV que controla frizz y define con acabado natural.",
+    "beneficiosClave": [
+      "frizz",
+      "protección UV",
+      "definición"
+    ],
+    "enlaceEcommerce": "https://www.jmhaircosmetic.com.ar/productos/crema-para-peinar-savia/"
+  },
+  {
+    "id": "aceiteCoco",
+    "nombre": "Aceite de Coco",
+    "descripcionBreve": "Aceite multiuso que nutre, sella puntas y aporta brillo instantáneo.",
+    "beneficiosClave": [
+      "sequedad",
+      "brillo",
+      "puntas abiertas"
+    ],
+    "enlaceEcommerce": "https://www.jmhaircosmetic.com.ar/productos/aceite-de-coco/"
+  },
+  {
+    "id": "serumVainilla",
+    "nombre": "Serum Vainilla",
+    "descripcionBreve": "Blend ligero que combate frizz y deja aroma dulce sin residuo.",
+    "beneficiosClave": [
+      "frizz",
+      "ligero",
+      "aroma"
+    ],
+    "enlaceEcommerce": "https://www.jmhaircosmetic.com.ar/productos/serum-vainilla/"
+  },
+  {
+    "id": "cepilloDesenredante",
+    "nombre": "Cepillo Desenredante",
+    "descripcionBreve": "Cerdas flexibles que reducen quiebre y masajean el cuero cabelludo.",
+    "beneficiosClave": [
+      "rotura",
+      "masaje",
+      "desenredo"
+    ],
+    "enlaceEcommerce": "https://www.jmhaircosmetic.com.ar/productos/cepillodesenredante/"
+  },
+  {
+    "id": "peineColaNegro",
+    "nombre": "Peine Cola Fina Negro",
+    "descripcionBreve": "Para divisiones precisas en peinados, tinturas y tratamientos.",
+    "beneficiosClave": [
+      "seccionado",
+      "peinados",
+      "profesional"
+    ],
+    "enlaceEcommerce": "https://www.jmhaircosmetic.com.ar/productos/peinecolafinanegro/"
+  },
+  {
+    "id": "peineColaRosa",
+    "nombre": "Peine Cola Fina Rosa",
+    "descripcionBreve": "Mis­ma precisión con diseño rosa ergonómico y liviano.",
+    "beneficiosClave": [
+      "seccionado",
+      "ergonómico",
+      "liviano"
+    ],
+    "enlaceEcommerce": "https://www.jmhaircosmetic.com.ar/productos/peinedecolafina/"
+  },
+  {
+    "id": "scrunchie",
+    "nombre": "Scrunchie Salmón",
+    "descripcionBreve": "Coletero satin destinado a evitar quiebres y marcas en el cabello.",
+    "beneficiosClave": [
+      "accesorio",
+      "sin daño",
+      "estilo"
+    ],
+    "enlaceEcommerce": "https://www.jmhaircosmetic.com.ar/productos/srunchie/"
+  },
+  {
+    "id": "vinchaFlex",
+    "nombre": "Vincha Flexible Negra",
+    "descripcionBreve": "Cinta plástica flexible que sujeta con comodidad todo el día.",
+    "beneficiosClave": [
+      "accesorio",
+      "sujeción",
+      "comodidad"
+    ],
+    "enlaceEcommerce": "https://www.jmhaircosmetic.com.ar/productos/vinchaflexible/"
+  },
+  {
+    "id": "stickers",
+    "nombre": "Planchas de Stickers",
+    "descripcionBreve": "Plancha de vinilos resistentes al agua para personalizar herramientas.",
+    "beneficiosClave": [
+      "accesorio",
+      "decoración",
+      "vinilo"
+    ],
+    "enlaceEcommerce": "https://www.jmhaircosmetic.com.ar/productos/stickers/"
+  },
+  {
+    "id": "miniPinzas",
+    "nombre": "Mini Pinzas para Cabello",
+    "descripcionBreve": "Pinzas compactas que sujetan mechones y detallan peinados.",
+    "beneficiosClave": [
+      "accesorio",
+      "sujeción",
+      "detalle"
+    ],
+    "enlaceEcommerce": "https://www.jmhaircosmetic.com.ar/productos/mini-pinzas-para-el-cabello/"
+  },
+  {
+    "id": "kitCherry",
+    "nombre": "Kit CHERRY – Cabellos Procesados",
+    "descripcionBreve": "Pack completo de Shampoo, Mask, Blindaje y más para cabellos químicos.",
+    "beneficiosClave": [
+      "procesados",
+      "nutrición",
+      "pack"
+    ],
+    "enlaceEcommerce": "https://www.jmhaircosmetic.com.ar/productos/kit-cherry/"
+  },
+  {
+    "id": "kitCoco",
+    "nombre": "Kit COCO – Cabello Rebelde",
+    "descripcionBreve": "Shampoo, Bálsamo, Mask y Aceite de Coco para controlar frizz.",
+    "beneficiosClave": [
+      "frizz",
+      "sequedad",
+      "pack"
+    ],
+    "enlaceEcommerce": "https://www.jmhaircosmetic.com.ar/productos/kit-coco/"
+  },
+  {
+    "id": "kitMatizador",
+    "nombre": "Kit MATIZADOR – Amarillentos",
+    "descripcionBreve": "Shampoo Grey Silver + Mask Black para neutralizar amarillos.",
+    "beneficiosClave": [
+      "matizador",
+      "rubios",
+      "pack"
+    ],
+    "enlaceEcommerce": "https://www.jmhaircosmetic.com.ar/productos/kit-matizador/"
+  },
+  {
+    "id": "kitSerum",
+    "nombre": "Kit SERUM – Todo Tipo de Cabello",
+    "descripcionBreve": "Combinación de serums nutritivos para brillo y sellado.",
+    "beneficiosClave": [
+      "brillo",
+      "sellado",
+      "pack"
+    ],
+    "enlaceEcommerce": "https://www.jmhaircosmetic.com.ar/productos/kit-serum-todo-tipo-de-cabellos/"
+  },
+  {
+    "id": "kitBiotina",
+    "nombre": "Kit BIOTINA PURA – Caída",
+    "descripcionBreve": "Shampoo + Baño de Biotina para fortalecer y frenar caída.",
+    "beneficiosClave": [
+      "caída",
+      "fortalecedor",
+      "pack"
+    ],
+    "enlaceEcommerce": "https://www.jmhaircosmetic.com.ar/productos/kit-biotina-pura/"
+  }
+]

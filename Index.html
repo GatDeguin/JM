@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistente de Diagnóstico Capilar JM</title>
+    <style>
+      :root {
+        --color-primary: #E53935;
+        --bg-page: #FFEBEB;
+        --bg-card: rgba(255,255,255,0.9);
+        --radius: 16px;
+        --transition: 0.3s ease;
+        --padding-small: 16px;
+        --padding-large: 32px;
+      }
+      *, *::before, *::after { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        padding: var(--padding-small);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        background: var(--bg-page);
+        color: #333;
+      }
+      .container {
+        background: var(--bg-card);
+        backdrop-filter: blur(20px);
+        padding: var(--padding-large);
+        max-width: 600px;
+        margin: auto;
+        border-radius: var(--radius);
+        box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+      }
+      .logo {
+        display: block;
+        margin: 0 auto var(--padding-large);
+        max-width: 100%;
+        height: auto;
+      }
+      h1 {
+        text-align: center;
+        font-size: 1.5rem;
+        margin-bottom: var(--padding-large);
+        color: var(--color-primary);
+        font-weight: 600;
+      }
+      .progress {
+        text-align: center;
+        font-size: 0.9rem;
+        margin-bottom: var(--padding-small);
+        color: #555;
+      }
+      .question p {
+        font-size: 1rem;
+        margin-bottom: var(--padding-small);
+      }
+      .option {
+        display: flex;
+        align-items: center;
+        margin-bottom: var(--padding-small);
+        font-size: 1rem;
+      }
+      .option input[type="radio"] {
+        accent-color: var(--color-primary);
+        width: 22px;
+        height: 22px;
+        margin-right: 12px;
+      }
+      button#nextBtn {
+        display: block;
+        width: 100%;
+        margin: var(--padding-large) 0 0;
+        background: var(--color-primary);
+        color: #fff;
+        border: none;
+        border-radius: var(--radius);
+        padding: 14px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        transition: background var(--transition), transform var(--transition);
+      }
+      button#nextBtn:hover:not(:disabled) {
+        background: #b71c1c;
+        transform: translateY(-2px);
+      }
+      button#nextBtn:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+      .result-card {
+        background: #fff;
+        border-radius: var(--radius);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        padding: var(--padding-small);
+        margin-bottom: var(--padding-small);
+        transition: transform var(--transition);
+      }
+      .result-card:hover {
+        transform: translateY(-4px);
+      }
+      .result-card h3 {
+        margin: 0 0 8px;
+        color: var(--color-primary);
+        font-size: 1.1rem;
+      }
+      .result-card p {
+        margin: 0 0 12px;
+        line-height: 1.4;
+      }
+      .result-card a {
+        color: var(--color-primary);
+        font-weight: 500;
+        text-decoration: none;
+        transition: text-decoration var(--transition);
+      }
+      .result-card a:hover {
+        text-decoration: underline;
+      }
+      @media (min-width: 600px) {
+        .container { padding: var(--padding-large); }
+        h1 { font-size: 1.75rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app" class="container">
+      <img src="Logo.png" alt="Logo JM Hair Cosmetic" class="logo" />
+      <h1>Asistente de Diagnóstico Capilar JM</h1>
+      <div id="questionnaire"></div>
+      <button id="nextBtn">Siguiente</button>
+      <div id="results"></div>
+    </div>
+    <script>
+      fetch('catalogo-jm.json')
+        .then(res => res.json())
+        .then(productosJM => {
+          const preguntas = [
+            { id: 'problema', texto: '¿Cuál es tu principal preocupación capilar?', opciones: [
+                { valor: 'caspa', label: 'Caspa' },
+                { valor: 'sequedad', label: 'Sequedad' },
+                { valor: 'frizz', label: 'Frizz' },
+                { valor: 'grasa', label: 'Grasa excesiva' },
+                { valor: 'daño químico', label: 'Daño químico o por calor' },
+                { valor: 'falta de volumen', label: 'Falta de volumen' },
+                { valor: 'rotura', label: 'Rotura' }
+              ]
+            },
+            { id: 'tipo', texto: '¿Cuál es tu tipo de cabello?', opciones: [
+                { valor: 'liso', label: 'Liso' },
+                { valor: 'ondulado', label: 'Ondulado' },
+                { valor: 'rizado', label: 'Rizado' },
+                { valor: 'crespo', label: 'Crespo' }
+              ]
+            },
+            { id: 'quimicos', texto: '¿Has tenido tratamientos químicos en los últimos 6 meses?', opciones: [
+                { valor: 'si', label: 'Sí' },
+                { valor: 'no', label: 'No' }
+              ]
+            },
+            { id: 'lavado', texto: '¿Con qué frecuencia lavas tu cabello?', opciones: [
+                { valor: 'diario', label: 'Diario' },
+                { valor: 'medio', label: '2-3 veces por semana' },
+                { valor: 'poco', label: 'Menos de 2 veces por semana' }
+              ]
+            }
+          ];
+
+          let respuestas = {};
+          let indicePregunta = 0;
+          const questionnaireDiv = document.getElementById('questionnaire');
+          const nextBtn = document.getElementById('nextBtn');
+          const resultsDiv = document.getElementById('results');
+
+          function renderPregunta() {
+            const pregunta = preguntas[indicePregunta];
+            questionnaireDiv.innerHTML = '';
+            const progress = document.createElement('div');
+            progress.className = 'progress';
+            progress.textContent = `Pregunta ${indicePregunta + 1} de ${preguntas.length}`;
+            questionnaireDiv.appendChild(progress);
+
+            const cont = document.createElement('div'); cont.className = 'question';
+            const p = document.createElement('p'); p.textContent = pregunta.texto;
+            cont.appendChild(p);
+            pregunta.opciones.forEach(opt => {
+              const label = document.createElement('label'); label.className = 'option';
+              const input = document.createElement('input');
+              input.type = 'radio'; input.name = pregunta.id; input.value = opt.valor;
+              label.appendChild(input);
+              label.appendChild(document.createTextNode(' ' + opt.label));
+              cont.appendChild(label);
+            });
+            questionnaireDiv.appendChild(cont);
+            nextBtn.disabled = true;
+            cont.addEventListener('change', () => {
+              const sel = document.querySelector(`input[name="${pregunta.id}"]:checked`);
+              nextBtn.disabled = !sel;
+            });
+          }
+
+          function mapPasoYInstruccion(prod) {
+            const nombre = prod.nombre.toLowerCase();
+            if (nombre.includes('baño')) {
+              return { paso: 'En cada lavado', instruccion: `Aplica el <strong>${prod.nombre}</strong> masajeando suavemente el cuero cabelludo para limpiar en profundidad y estimular la microcirculación.` };
+            } else if (nombre.includes('keratina') || nombre.includes('botox')) {
+              return { paso: 'Una vez por semana', instruccion: `Reparte una cantidad generosa de <strong>${prod.nombre}</strong> desde medios hasta puntas, deja actuar 10-15 minutos y enjuaga. Fortalecerá tu fibra capilar.` };
+            } else if (nombre.includes('cherry')) {
+              return { paso: 'Después del lavado', instruccion: `Con el cabello húmedo, reparte unas gotas de <strong>${prod.nombre}</strong> para sellar la cutícula y aportar nutrición profunda.` };
+            } else if (nombre.includes('blindaje')) {
+              return { paso: 'Antes de peinar', instruccion: `Aplica <strong>${prod.nombre}</strong> sobre el cabello húmedo o seco para protegerlo del calor y aportar brillo.` };
+            }
+            return { paso: 'Uso según indicaciones', instruccion: `Incorpora <strong>${prod.nombre}</strong> según las instrucciones específicas del producto.` };
+          }
+
+          function obtenerRecomendacion() {
+            const { problema, tipo, quimicos } = respuestas;
+            let recomendados = productosJM.filter(p => p.beneficiosClave.includes(problema));
+            if (['rizado', 'ondulado'].includes(tipo)) {
+              recomendados = [...recomendados, ...productosJM.filter(p => p.beneficiosClave.includes('cabello ' + tipo))];
+            }
+            if (quimicos === 'si') {
+              recomendados = [...recomendados, ...productosJM.filter(p => p.beneficiosClave.includes('daño químico'))];
+            }
+            // Eliminar duplicados
+            const unique = Array.from(new Map(recomendados.map(item => [item.id, item])).values());
+            return unique.slice(0, 5);
+          }
+
+          function renderResultados(lista) {
+            questionnaireDiv.innerHTML = '';
+            nextBtn.style.display = 'none';
+            resultsDiv.innerHTML = '';
+            const summary = document.createElement('div'); summary.id = 'diagnosis-summary';
+            summary.innerHTML = `<p>Gracias por completar el cuestionario. Has indicado que tu principal preocupación es <strong>${respuestas.problema}</strong>, tu tipo de cabello es <strong>${respuestas.tipo}</strong> y ${respuestas.quimicos === 'si' ? 'has tenido tratamientos químicos recientemente.' : 'no has tenido tratamientos químicos en los últimos meses.'}</p>`;
+            resultsDiv.appendChild(summary);
+            const intro = document.createElement('div'); intro.id = 'routine-intro';
+            intro.innerHTML = `<p>Con este diagnóstico, te proponemos una rutina sencilla y efectiva que podrás seguir fácilmente desde casa:</p>`;
+            resultsDiv.appendChild(intro);
+
+            lista.forEach((prod, i) => {
+              const { paso, instruccion } = mapPasoYInstruccion(prod);
+              const card = document.createElement('div'); card.className = 'result-card';
+              card.innerHTML = `
+                <h3>Paso ${i+1}: ${paso}</h3>
+                <p>${instruccion}</p>
+                <a href="${prod.enlaceEcommerce}" target="_blank">Ver ${prod.nombre}</a>
+              `;
+              resultsDiv.appendChild(card);
+            });
+          }
+
+          nextBtn.addEventListener('click', () => {
+            const pregunta = preguntas[indicePregunta];
+            const sel = document.querySelector(`input[name="${pregunta.id}"]:checked`);
+            if (!sel) return;
+            respuestas[pregunta.id] = sel.value;
+            indicePregunta++;
+            if (indicePregunta < preguntas.length) {
+              renderPregunta();
+            } else {
+              renderResultados(obtenerRecomendacion());
+            }
+          });
+
+          // Iniciar
+          renderPregunta();
+        })
+        .catch(err => {
+          console.error('Error cargando catálogo:', err);
+          document.getElementById('app').innerHTML = '<p>Hubo un problema cargando el catálogo de productos. Intenta nuevamente.</p>';
+        });
+    </script>
+  </body>
+</html>
